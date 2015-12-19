@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.field{
+  margin-bottom: 20px !important;
+
+  input, textarea{
+    width: calc(80% - 22px);
+    padding: 5px;
+  }
+
+  label{
+    display: block;
+  }
+}

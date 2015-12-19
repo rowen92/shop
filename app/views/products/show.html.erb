@@ -1,0 +1,13 @@
+<h1><%= @product.title %></h1>
+<div>
+  <%= image_tag @product.image_url(:big) %>
+</div>
+<div>
+  <%= @product.description %>
+</div>
+<div>
+  Price: <%= number_to_currency(@product.price, precision: 2, separator: ',') %>
+</div>
+<div>
+  <%= link_to 'Buy', '#' %>
+</div>

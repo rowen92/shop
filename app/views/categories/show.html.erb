@@ -1,0 +1,19 @@
+
+<h2>Category "<%= @category.title %>"</h2>
+
+<%= link_to "Categories List", categories_path, class: 'btn btn-primary' %>
+<%= link_to 'Edit Category', edit_category_path(@category), class: 'btn btn-primary' %>
+<%= link_to 'Delete', category_path(@category), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+<p>
+  <%= image_tag @category.image_url %>
+</p>
+<p><strong>position:</strong> <%= @category.position %></p>
+<p>
+  <strong>short_description:</strong> <%= @category.short_description %>
+</p>
+<p>
+  <strong>description:</strong> <%= @category.description %>
+</p>
+<p><strong>meta_title:</strong> <%= @category.meta_title %></p>
+<p><strong>meta_description:</strong> <%= @category.meta_description %></p>
+<p><strong>meta_keywords:</strong> <%= @category.meta_keywords %></p>

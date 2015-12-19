@@ -1,0 +1,50 @@
+<%= form_for(@category, url: @category.new_record? ? categories_path : category_path) do |f| %>
+  <% if @category.errors.present? %>
+    <% @category.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :position %>
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :short_description %>
+    <%= f.text_area :short_description %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :remote_image_url, "Cсылка на изображение" %>
+    <%= f.text_field :remote_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_title %>
+    <%= f.text_field :meta_title %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_description %>
+    <%= f.text_area :meta_description %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_keywords %>
+    <%= f.text_area :meta_keywords %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
