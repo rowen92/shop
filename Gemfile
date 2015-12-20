@@ -24,6 +24,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'aws-sdk'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

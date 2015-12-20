@@ -1,6 +1,0 @@
-<h2>Редактирование категории "<%= @category.title %>"</h2>
-<%= image_tag @category.image_url, style: 'width: 100px;' if @category.image? %>
-<%= link_to 'New Category', new_category_path, class: 'btn btn-primary' %>
-<%= link_to "Categories List", categories_path, class: 'btn btn-primary' %>
-
-<%= render 'form' %>
