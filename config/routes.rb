@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'cart' => 'carts#show'
-
   get 'about' => 'pages#about'
+
   resources :line_items, :categories, :products
 
   # The priority is based upon order of creation: first created -> highest priority.

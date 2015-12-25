@@ -42,12 +42,11 @@ h1{
   text-align: center;
 }
 
-.product{
+.product, .category{
   border: 1px solid #C8C8C8;
   border-radius: 5px;
   padding: 25px;
   text-align: center;
-  width: 220px;
   margin: 20px;
   background-color: #FFF;
   display: inline-block;
@@ -60,4 +59,12 @@ h1{
   img{
     margin-bottom: 15px;
   }
+}
+
+.product{
+  width: 220px;
+}
+
+.category{
+  width: 320px;
 }
