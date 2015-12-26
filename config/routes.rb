@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'pages#home'
-  get 'cart' => 'carts#show'
-  get 'about' => 'pages#about'
+  get '/cart' => 'carts#show'
+  get '/about' => 'pages#about'
 
-  resources :line_items, :categories, :products
+  resources :line_items, only: [:create, :destroy]
+  resources :categories, :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
