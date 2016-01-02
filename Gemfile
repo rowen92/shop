@@ -25,6 +25,8 @@ gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'aws-sdk'
+gem 'jquery-ui-rails'
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

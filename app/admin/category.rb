@@ -7,7 +7,7 @@ ActiveAdmin.register Category, as: 'Product Categories' do
     column :id
     column :title
     column 'image' do |category|
-      image_tag category.image_url(:small) if category.image?
+      image_tag category.image_url(:very_small) if category.image?
     end
     column :short_description
     actions
@@ -15,7 +15,7 @@ ActiveAdmin.register Category, as: 'Product Categories' do
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
-    f.inputs "Category" do
+    f.inputs 'Category' do
       f.input :title
       f.input :short_description
       f.input :description

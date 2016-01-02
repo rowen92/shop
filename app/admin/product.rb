@@ -14,7 +14,7 @@ ActiveAdmin.register Product do
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
-    f.inputs "Product" do
+    f.inputs 'Product' do
       f.input :category_id, as: :select,
                             collection: Category.all.map{|c| [c.title, c.id]},
                             include_blank: true

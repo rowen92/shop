@@ -2,12 +2,13 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  resources :line_items, only: [:create, :destroy]
+  resources :categories, :products, :orders
+
   root 'pages#home'
   get '/cart' => 'carts#show'
+  delete '/cart.:id' => 'carts#destroy'
   get '/about' => 'pages#about'
-
-  resources :line_items, only: [:create, :destroy]
-  resources :categories, :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
