@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
-  STATUS = ['new', 'in progress', 'completed', 'canceled']
+  STATUS = ['in progress', 'completed', 'canceled']
 
   validates :name, :phone, presence: true
 

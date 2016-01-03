@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  post 'line_items/increment_quantity' => 'line_items#increment_quantity'
+  post 'line_item/decrement_quantity' => 'line_items#decrement_quantity'
+
   resources :line_items, only: [:create, :destroy]
   resources :categories, :products, :orders
 

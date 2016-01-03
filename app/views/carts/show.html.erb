@@ -5,24 +5,20 @@
     <tr>
       <td><%= index+1 %></td>
       <td><%= link_to line_item.product.title, product_path(line_item.product) %></td>
-      <td><%= line_item.quantity %></td>
+      <td class="line_item_quantity"><%= line_item.quantity %></td>
       <td><%= number_to_currency(line_item.product.price) %></td>
       <td>
-        <%= button_to line_item, class: "btn btn-default", remote: true do %>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        <% end %>
+        <%= button_to '+', { controller: 'line_items', action: 'increment_quantity', line_item: line_item }, remote: true  %>
       </td>
       <td>
-        <%= button_to line_item, class: "btn btn-default", remote: true do %>
-            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-        <% end %>
+        <%= button_to '-', { controller: 'line_items', action: 'decrement_quantity', line_item: line_item }, remote: true  %>
       </td>
     </tr>
     <% end %>
 
     <tr>
       <td>Total:</td>
-      <td><%= number_to_currency(@cart.total_price) %></td>
+      <td class="cart_total_price"><%= number_to_currency(@cart.total_price) %></td>
     </tr>
   </table>
 </div>
