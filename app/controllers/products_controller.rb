@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
   def index
     @category = Category.where(id: params[:category]).first if params[:category].present?
 
-    @products = if params[:search].present?
-                  Product.search(params[:search])
+    @products = if params[:query].present?
+                  Product.search(params[:query])
                 else
                   if @category.present?
                     @category.products
@@ -16,6 +16,15 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+  end
+
+  def search_suggestions
+    results = if params[:query].present?
+                Product.search_for_ajax(params[:query])
+              else
+                []
+              end
+    render json: results
   end
 
 end

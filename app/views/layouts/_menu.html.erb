@@ -8,13 +8,14 @@
 <ul class="nav navbar-nav navbar-right">
   <%= form_tag(products_path, :method => "GET", class: "navbar-form navbar-left") do %>
       <div class="form-group">
-        <%= text_field_tag :search,
-                           params[:search],
-                           placeholder: "Search Products",
-                           class: "form-control" %>
+        <%= text_field_tag(:query, (params[:query].present? ? params[:query] : nil),
+                           class: 'form-control',
+                           placeholder: 'Поиск',
+                           autocomplete: 'off') %>
         <%= button_tag(type: "submit", class: "btn btn-default") do %>
             Search
         <% end %>
+        <ul id="results"></ul>
       </div>
   <% end %>
 </ul>

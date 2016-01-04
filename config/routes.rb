@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/cart' => 'carts#show'
   delete '/cart.:id' => 'carts#destroy'
   get '/about' => 'pages#about'
+  get 'search_suggestions' => 'products#search_suggestions', as: :search_suggestions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

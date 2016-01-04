@@ -25,8 +25,12 @@ class Product < ActiveRecord::Base
     end
   end
 
-  def self.search(search)
-    where('title LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%")
+  def self.search(query)
+    where('title LIKE ? OR description LIKE ?', "%#{query}%", "%#{query}%")
+  end
+
+  def self.search_for_ajax(query)
+    where('title LIKE ? OR description LIKE ?', "%#{query}%", "%#{query}%").select(:id, :title)
   end
 
 end
