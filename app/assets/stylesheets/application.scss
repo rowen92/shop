@@ -88,9 +88,7 @@ ul#results{
   margin-top: 4px;
   width: 247px;
   display: none;
-  color: #7B7B7B;
   li{
-    cursor: pointer;
     line-height: 1.5;
     font-size: 95%;
     padding: 8px 0;
@@ -98,8 +96,11 @@ ul#results{
     &:last-child{
       border-bottom: none;
     }
-    &:hover{
-      color: #337ab7;
+    a{
+      color: #000;
+      &:hover{
+        color: #337ab7;
+      }
     }
   }
 }
