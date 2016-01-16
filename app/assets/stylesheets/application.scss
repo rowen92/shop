@@ -17,7 +17,7 @@
 @import "bootstrap";
 
  body{
-  min-width: 1000px;
+  min-width: 960px;
  }
 
 .container{
@@ -44,6 +44,9 @@
   a{
     text-decoration: none;
     margin-top: 10px;
+    &.active{
+      background-color: #EEE;
+    }
   }
 }
 
@@ -110,4 +113,9 @@ ul#results{
   .pagination{
     float: none;
   }
+}
+
+.page-description{
+  margin-top: 10px;
+  line-height: 2;
 }
