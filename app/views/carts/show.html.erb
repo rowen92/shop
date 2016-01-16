@@ -1,5 +1,5 @@
+<h2>In the basket:</h2>
 <div class="col-md-6">
-  <h2>In the basket:</h2>
   <table class="table">
     <% @line_items.each_with_index do |line_item, index| %>
     <tr>
@@ -21,10 +21,8 @@
       <td class="cart_total_price"><%= number_to_currency(@cart.total_price) %></td>
     </tr>
   </table>
+  <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
-
-<div class="clear"></div>
-
-<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-<%= render 'orders/form' %>
+<div class="col-md-6">
+  <%= render 'orders/form' %>
+</div>

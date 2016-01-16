@@ -17,7 +17,7 @@
 @import "bootstrap";
 
  body{
-  min-width: 960px;
+  min-width: 1000px;
  }
 
 .container{
@@ -102,5 +102,12 @@ ul#results{
         color: #337ab7;
       }
     }
+  }
+}
+
+.paginate{
+  text-align: center;
+  .pagination{
+    float: none;
   }
 }

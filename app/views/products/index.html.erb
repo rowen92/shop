@@ -1,1 +1,4 @@
 <%= render @products %>
+<div class="paginate">
+  <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
+</div>

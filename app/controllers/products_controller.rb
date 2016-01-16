@@ -7,9 +7,9 @@ class ProductsController < ApplicationController
                   Product.search(params[:query])
                 else
                   if @category.present?
-                    @category.products
+                    @category.products.paginate(page: params[:page])
                   else
-                    Product.all
+                    Product.paginate(page: params[:page])
                   end
                 end
   end
