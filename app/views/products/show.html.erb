@@ -1,11 +1,12 @@
 <% provide(:title, '| ' + @product.title) %>
 <h2><%= @product.title %></h2>
-<div>
-  <%= image_tag @product.image_url(:big) %>
+<div class="product-show-left">
+  <%= image_tag @product.image_url(:big), class: 'product-img-show' %>
+  <p class="product-price-show">Price: <%= number_to_currency(@product.price, precision: 2, separator: ',') %></p>
+  <div class="action">
+    <%= button_to 'Buy', line_items_path(product_id: @product), class: 'btn btn-success' %>
+  </div>
 </div>
-<p><%= @product.description %></p>
-<p>Price: <%= number_to_currency(@product.price, precision: 2, separator: ',') %></p>
-
-<div class="action">
-  <%= button_to 'Buy', line_items_path(product_id: @product), class: 'btn-buy' %>
+<div class="product-show-right">
+  <p><%= @product.description %></p>
 </div>

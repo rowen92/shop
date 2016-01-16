@@ -46,6 +46,7 @@
     margin-top: 10px;
     &.active{
       background-color: #EEE;
+      border-bottom: 2px solid #575757;
     }
   }
 }
@@ -75,6 +76,10 @@ h1{
 
 .product{
   width: 260px;
+  .category-product-title{
+    color: #999;
+    font-size: 90%;
+  }
 }
 
 .category{
@@ -118,4 +123,23 @@ ul#results{
 .page-description{
   margin-top: 10px;
   line-height: 2;
+}
+
+.product-img-show{
+  float: left;
+  margin-right: 10px;
+}
+
+.product-price-show{
+  font-size: 130%;
+  color: #199512;
+}
+
+.product-show-left{
+  float: left;
+}
+
+.product-show-right{
+  float: right;
+  width: 500px;
 }

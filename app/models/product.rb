@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
   validates :title, :description, :image, :price, presence: true
   validates :title, uniqueness: true
 
-  self.per_page = 3
+  self.per_page = 6
 
   mount_uploader :image, ProductUploader
 
