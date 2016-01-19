@@ -2,7 +2,7 @@
   <p><%= link_to product.category.title, products_path(category: product.category), class: 'category-product-title' %></p>
   <%= link_to (image_tag product.image_url(:small)), product if product.image? %>
   <p><%= link_to product.title, product %></p>
-  <p>Price: <%= number_to_currency(product.price, precision: 2, separator: ',') %></p>
+  <p>Price: <%= number_to_currency(product.price, delimiter: ' ', precision: 2, separator: '.') %></p>
 
   <div class="action">
     <%= button_to 'Buy', line_items_path(product_id: product), class: 'btn-buy' %>

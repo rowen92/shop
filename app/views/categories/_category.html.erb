@@ -1,0 +1,7 @@
+<% @categories.each do |category| %>
+  <div class="category">
+    <%= link_to (image_tag category.image_url(:big)), products_path(category: category) if category.image? %>
+    <p><%= link_to category.title, products_path(category: category) %></p>
+    <p><%= truncate(category.short_description, length: 150) %></p>
+  </div>
+<% end %>
