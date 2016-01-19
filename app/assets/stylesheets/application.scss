@@ -58,12 +58,9 @@ h1{
 .product, .category{
   border: 1px solid #C8C8C8;
   border-radius: 5px;
-  padding: 25px;
   text-align: center;
-  margin: 20px;
   background-color: #FFF;
   display: inline-block;
-
   a{
     font-size: 130%;
     text-decoration: none;
@@ -75,7 +72,9 @@ h1{
 }
 
 .product{
-  width: 260px;
+  width: 230px;
+  margin: 10px 0px;
+  padding: 20px 0px;
   .category-product-title{
     color: #999;
     font-size: 90%;
@@ -85,6 +84,7 @@ h1{
 .category{
   width: 350px;
   margin: 20px 55px;
+  padding: 25px;
 }
 
 ul#results{
@@ -143,4 +143,15 @@ ul#results{
 .product-show-right{
   float: right;
   width: 500px;
+}
+
+.sidebar-categories{
+  float: left;
+  width: 200px;
+  padding: 20px;
+}
+
+.products{
+  float: right;
+  width: 700px;
 }

@@ -1,5 +1,11 @@
-<% provide(:title, '| Products') %>
-<%= render @products %>
-<div class="paginate">
-  <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
+<div class="sidebar-categories">
+  <h4>Categories</h4>
+  <%= render 'products/filter_categories' %>
+</div>
+<div class="products">
+  <% provide(:title, '| Products') %>
+  <%= render @products %>
+  <div class="paginate">
+    <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
+  </div>
 </div>

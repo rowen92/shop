@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @category = Category.where(id: params[:category]).first if params[:category].present?
+    @categories = Category.all.order(:title)
 
     @products = if params[:query].present?
                   Product.search(params[:query])
