@@ -24,9 +24,11 @@ ready = function () {
             $('#results').empty();
             $('#results').show();
             $.each(data, function(index, result) {
-                $('#results').append("<li><a href=/products/"+result.id+">"+result.title+"</a></li>");
+                if (index < 10){
+                    $('#results').append("<li><a href=/products/"+result.id+">"+result.title+"</a></li>");
+                }
             });
-            if (typeof (val) == 'undefined' || val == "") {
+            if (typeof (val) == 'undefined' || val == null || val == "" || data == "") {
                 $('#results').hide();
             }
         });
